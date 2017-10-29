@@ -1,3 +1,6 @@
 # jetLite
 ### Using Tensorflow
 See [how to install TF](https://www.tensorflow.org/install/) and [how to install TF for Java](https://www.tensorflow.org/install/install_java) for installation instructions. The `jni` folder described in the second link should be placed in the root folder and be referenced as a library in your runtime script using `-Djava.library.path=./jni`. This repo comes with Tensorflow 1.3.0. For future releases, update the TF library in the `lib` folder, and the `compile` script to match your TF version.
+
+### Additional Data Files
+The project as a whole is missing the ACE files, which are available through [LDC](https://catalog.ldc.upenn.edu/LDC2005T09). They should be placed under the `data` directory. The other requirement (right now) is the GloVe pretrained word embeddings file, which can be found on the [Stanford NLP's GloVe website](https://nlp.stanford.edu/projects/glove/). It should also be placed under the `data` directory. They might in future be integrated into the model files themselves.
