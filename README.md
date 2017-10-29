@@ -1,1 +1,3 @@
 # jetLite
+### Using Tensorflow
+See [how to install TF](https://www.tensorflow.org/install/) and [how to install TF for Java](https://www.tensorflow.org/install/install_java) for installation instructions. The `jni` folder described in the second link should be placed in the root folder and be referenced as a library in your runtime script using `-Djava.library.path=./jni`. This repo comes with Tensorflow 1.3.0. For future releases, update the TF library in the `lib` folder, and the `compile` script to match your TF version.
