@@ -119,17 +119,17 @@ public class TFRelationTagger implements AutoCloseable {
             default:
                 numClasses = 7;
                 labels = BASIC_LABELS;
-                modelPath = Paths.get(MODEL_DIR, "frozen_basic.pb");
+                modelPath = Paths.get(MODEL_DIR, "optimized_basic.pb");
                 break;
             case Subtype:
                 numClasses = 19;
                 labels = SUBTYPE_LABELS;
-                modelPath = Paths.get(MODEL_DIR, "frozen_subtype.pb");
+                modelPath = Paths.get(MODEL_DIR, "optimized_subtype.pb");
                 break;
             case SubtypeWithOrder:
                 numClasses = 37;
                 labels = SUBTYPE_WITH_ORDER_LABELS;
-                modelPath = Paths.get(MODEL_DIR, "frozen_subtype_with_order.pb");
+                modelPath = Paths.get(MODEL_DIR, "optimized_subtype_with_order.pb");
                 break;
         }
         graphDef = readAllBytesOrExit(modelPath);

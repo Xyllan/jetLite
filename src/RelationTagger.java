@@ -98,6 +98,7 @@ public class RelationTagger extends Annotator implements AutoCloseable {
 	p.setProperty("RelationTagger.model.fileName", modelFN);
     try(RelationTagger rtagger = new RelationTagger(p, true, TypeDetail.Basic)) {
         // rtagger.getExamples(docDir, trainDocListFileName, "training.txt");
+        // rtagger.getExamples(docDir, testDocListFileName, "test.txt");
         rtagger.trainTagger(docDir, trainDocListFileName);
         rtagger.evaluate(docDir, testDocListFileName);
     }

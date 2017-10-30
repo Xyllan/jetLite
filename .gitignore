@@ -1,3 +1,7 @@
 edu/
 jni/
 data/
+RTFmodel/__pycache__/
+RTFmodel/*.txt
+RTFmodel/frozen*
+RTFmodel/*.npy
