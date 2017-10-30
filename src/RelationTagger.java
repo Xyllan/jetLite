@@ -490,8 +490,10 @@ loop:
 	BufferedReader docListReader = new BufferedReader (new FileReader (testDocListFileName));
 	String line;
     List<List<WordInfo>> examples = new ArrayList<List<WordInfo>>();
-	while ((line = docListReader.readLine()) != null)
-	    examples.addAll(evaluateOnDocument(docDir + "/" + line.trim()));
+	while ((line = docListReader.readLine()) != null) {
+        List<List<WordInfo>> docExamples = evaluateOnDocument(docDir + "/" + line.trim());
+        if(docExamples != null) examples.addAll(docExamples);
+    }
     if(useTFmodel) {
         List<String> predictions = tfTagger.predictMultiple(examples);
         evaluatePredictions(predictions, actuals);

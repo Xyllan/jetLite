@@ -5,3 +5,6 @@ RTFmodel/__pycache__/
 RTFmodel/*.txt
 RTFmodel/frozen*
 RTFmodel/*.npy
+RTFmodel/*.ckpt.*
+RTFmodel/*.proto
+RTFmodel/checkpoint
